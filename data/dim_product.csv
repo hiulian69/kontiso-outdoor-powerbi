@@ -1,0 +1,37 @@
+ProductKey,ProductName,Category,StandardCost,ListPrice
+1001,Road Bike Helmet,Cycling,29,79
+1002,MTB Gloves,Cycling,9,24
+1003,Bike Pannier 20L,Cycling,22,55
+1004,Cycling Jersey,Cycling,18,49
+1005,LED Light Set,Cycling,7,19
+1006,Chain Lubricant,Cycling,3,9
+1007,Bike Pump,Cycling,11,27
+1008,Water Bottle 750ml,Cycling,2,8
+1009,2-Person Tent,Camping,64,159
+1010,Sleeping Bag -5C,Camping,41,99
+1011,Camping Stove,Camping,28,69
+1012,Headlamp 300lm,Camping,12,29
+1013,Insulated Mug,Camping,5,14
+1014,Folding Chair,Camping,17,39
+1015,Trekking Poles,Camping,23,55
+1016,Dry Bag 15L,Camping,9,22
+1017,Trail Running Shoe,Running,52,120
+1018,Running Shorts,Running,13,32
+1019,Hydration Vest,Running,34,79
+1020,GPS Sport Watch,Running,88,199
+1021,Compression Socks,Running,6,16
+1022,Reflective Vest,Running,8,21
+1023,Ski Goggles,Winter Sports,31,75
+1024,Thermal Base Layer,Winter Sports,19,45
+1025,Merino Beanie,Winter Sports,8,22
+1026,Insulated Jacket,Winter Sports,71,169
+1027,Ski Gloves,Winter Sports,21,49
+1028,Snow Gaiters,Winter Sports,14,34
+1029,Softshell Jacket,Apparel,44,99
+1030,Hiking Trousers,Apparel,29,69
+1031,Fleece Pullover,Apparel,22,52
+1032,Rain Poncho,Apparel,7,18
+1033,Sun Hat,Apparel,6,15
+1034,Wool Socks 3-pack,Apparel,9,24
+1035,Baseball Cap,Apparel,5,13
+1036,Neck Gaiter,Apparel,4,11

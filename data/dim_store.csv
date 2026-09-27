@@ -1,0 +1,9 @@
+StoreKey,StoreName,City,Country,CountryCode
+1,Wien Zentrum,Vienna,Austria,AT
+2,Graz Süd,Graz,Austria,AT
+3,Salzburg Altstadt,Salzburg,Austria,AT
+4,München Ost,Munich,Germany,DE
+5,Berlin Mitte,Berlin,Germany,DE
+6,Hamburg Hafen,Hamburg,Germany,DE
+7,Zürich West,Zurich,Switzerland,CH
+8,Online Store,—,DACH Online,EU

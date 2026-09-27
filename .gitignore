@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Power BI Desktop temp / backup files
+*.pbix.bak
+~$*.pbix
+.pbi/localSettings.json
+.pbi/cache.abf
+
+# Obsidian (repo lives inside a vault)
+.obsidian/

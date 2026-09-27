@@ -1,0 +1,36 @@
+// Kontiso Outdoor — DAX measures
+// Exported verbatim from Kontiso-Outdoor.pbix (home table: fact_sales).
+// Grain of fact_sales: one row = one product on one order (order line).
+
+// Revenue after line discount. SUMX, not SUM: the discount applies per line,
+// so price × (1 − discount) × quantity must be evaluated row by row before summing.
+Revenue =
+SUMX (
+    fact_sales,
+    fact_sales[UnitPrice] * ( 1 - fact_sales[Discount] ) * fact_sales[Quantity]
+)
+
+// Cost of goods sold at standard unit cost.
+Cost =
+SUMX ( fact_sales, fact_sales[UnitCost] * fact_sales[Quantity] )
+
+Gross Profit =
+[Revenue] - [Cost]
+
+// DIVIDE returns BLANK instead of an error when Revenue is 0.
+Margin % =
+DIVIDE ( [Gross Profit], [Revenue] )
+
+// Latest year in the current filter context vs. the year before.
+// REMOVEFILTERS clears the date filter so the prior year can be reached,
+// then each CALCULATE puts back exactly one year.
+Revenue YoY % =
+VAR CurY = MAX ( dim_date[Year] )
+VAR Cur  = CALCULATE ( [Revenue], REMOVEFILTERS ( dim_date ), dim_date[Year] = CurY )
+VAR Prev = CALCULATE ( [Revenue], REMOVEFILTERS ( dim_date ), dim_date[Year] = CurY - 1 )
+RETURN
+    DIVIDE ( Cur - Prev, Prev )
+
+// Average units per order line — the volume check behind the discount chart.
+Units per Line =
+DIVIDE ( SUM ( fact_sales[Quantity] ), COUNTROWS ( fact_sales ) )
