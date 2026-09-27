@@ -13,7 +13,7 @@ A one-page Power BI dashboard for **Kontiso Outdoor**, a fictional outdoor-gear 
 
 ![Kontiso Outdoor dashboard](images/dashboard.png)
 
-📄 [Dashboard as PDF](docs/Kontiso-Outdoor-dashboard.pdf) · 🧮 [DAX measures](model/measures.dax) · 📦 [Power BI file](Kontiso-Outdoor.pbix)
+📄 PDF exports: [2024–2025](docs/Kontiso-Outdoor-2024-2025.pdf) · [2025, undiscounted lines only](docs/Kontiso-Outdoor-2025-undiscounted.pdf) · 🧮 [DAX measures](model/measures.dax) · 📦 [Power BI file](Kontiso-Outdoor.pbix)
 
 ---
 
@@ -51,6 +51,8 @@ Every number above is recomputed from the raw CSVs in [`checks/verify_kpis.py`](
 | **Revenue by Category × Year** (stacked bar) | Each category's size and its 2024 → 2025 change | Horizontal bars keep category names readable. |
 | **Margin % by discount band** (column) | Margin drops with every 5-point discount step | The chart behind the recommendation. Units per line sits in the tooltip as a check on volume. |
 | **Takeaway text** | The conclusion in one sentence | The reader gets the message without having to work it out from the charts. |
+
+**Cross-filtering:** clicking a bar filters the whole page. The [2025 undiscounted PDF](docs/Kontiso-Outdoor-2025-undiscounted.pdf) shows this: with 2025 selected and the 0 % discount bar clicked, the cards show only full-price lines (€278k revenue at 58.6 % margin, +15.6 % YoY).
 
 Chart titles state the conclusion ("Camping and Running drive over half of gross profit") instead of naming the fields. That idea, and the written takeaway, come from *Storytelling with Data* by Cole Nussbaumer Knaflic.
 
@@ -168,9 +170,11 @@ kontiso-outdoor-powerbi/
 ├── checks/
 │   └── verify_kpis.py             pandas cross-check of every number
 ├── docs/
-│   └── Kontiso-Outdoor-dashboard.pdf
+│   ├── Kontiso-Outdoor-2024-2025.pdf         PDF export, both years
+│   └── Kontiso-Outdoor-2025-undiscounted.pdf PDF export, 2025 cross-filtered to 0 % discount
 └── images/
-    └── dashboard.png
+    ├── dashboard.png                  README screenshot (cropped, high-res)
+    └── dashboard-screenshot.jpg       original screenshot
 ```
 
 ## Next steps
